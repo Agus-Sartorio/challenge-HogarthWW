@@ -1,0 +1,69 @@
+.hero-space-luna {
+  display: flex;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  background-image: url("../images/final-frontier_large.jpg");
+  width: 1440px;
+  height: 960px;
+  background-size: cover;
+  background-position: 60%;
+  background-repeat: no-repeat;
+}
+
+.hero-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-copy a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+}
+
+.gallery-grid {
+  display: block;
+}
+
+.gallery-photo:nth-child(odd) {
+  float: left;
+}
+
+@supports (display: grid) {
+  .gallery-grid {
+    display: grid;
+  }
+
+  .gallery-photo:nth-child(odd) {
+    float: none;
+  }
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 780px) {
+  .hero-space-luna {
+    flex-direction: column;
+  }
+
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+}
